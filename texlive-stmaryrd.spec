@@ -91,6 +91,7 @@ what is loaded, for those who don't need the whole font.
 #- source
 %doc %{_texmfdistdir}/source/fonts/stmaryrd/stmaryrd.dtx
 %doc %{_texmfdistdir}/source/fonts/stmaryrd/stmaryrd.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -101,3 +102,5 @@ what is loaded, for those who don't need the whole font.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
