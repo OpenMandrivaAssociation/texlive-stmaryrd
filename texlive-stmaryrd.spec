@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-stmaryrd
-Version:	20110409
-Release:	5
+Version:	20170414
+Release:	1
 Summary:	St Mary Road symbols for theoretical computer science
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/stmaryrd
