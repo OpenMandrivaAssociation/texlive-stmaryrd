@@ -5,7 +5,7 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-stmaryrd
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	St Mary Road symbols for theoretical computer science
 Group:		Publishing
