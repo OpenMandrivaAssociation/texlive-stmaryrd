@@ -1,19 +1,13 @@
-# revision 22027
-# category Package
-# catalog-ctan /fonts/stmaryrd
-# catalog-date 2009-10-10 00:51:28 +0200
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-stmaryrd
-Version:	20190228
+Version:	22027
 Release:	1
 Summary:	St Mary Road symbols for theoretical computer science
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/stmaryrd
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +21,12 @@ is provided for use under LaTeX; the package supports the
 what is loaded, for those who don't need the whole font.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -84,7 +78,8 @@ what is loaded, for those who don't need the whole font.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
