@@ -3,7 +3,7 @@ Version:	22027
 Release:	2
 Summary:	St Mary Road symbols for theoretical computer science
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/fonts/stmaryrd
+URL:		https://www.ctan.org/tex-archive/fonts/stmaryrd
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.doc.r%{version}.tar.xz
