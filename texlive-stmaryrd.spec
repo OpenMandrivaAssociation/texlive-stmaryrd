@@ -13,7 +13,8 @@ Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.doc.r%{
 Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/stmaryrd.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-Provides:	texlive(%{tl_name}) = %{tl_revision}
+Requires:	texlive-tlpkg
+Provides:	texlive(%{tl_name}) = %{version}
 
 %description
 The fonts were originally distributed as Metafont sources only, but
@@ -22,3 +23,10 @@ for use under LaTeX; the package supports the "only" option (provided by
 the somedefs package) to restrict what is loaded, for those who don't
 need the whole font.
 
+
+%install -a
+mkdir -p %{buildroot}%{_texmf_updmap_d}
+cat > %{buildroot}%{_texmf_updmap_d}/%{tl_name} <<'TL_DROPIN_EOF'
+# from stmaryrd:
+MixedMap stmaryrd.map
+TL_DROPIN_EOF
